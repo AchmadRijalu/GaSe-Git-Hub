@@ -7,13 +7,14 @@ body {
   background-size: cover;
 }
 
-label {
-  color: white;
-}
-
 input {
+  background-color: #d9f1ff;
   width: 50%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+::placeholder {
+  color: rgb(0, 0, 0);
 }
 
 .box {
