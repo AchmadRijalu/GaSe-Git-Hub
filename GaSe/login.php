@@ -6,7 +6,7 @@ $database = new database();
 // untuk mengecek user yang sudah login akan di direct ke halaman home
 if(isset($_SESSION['is_login']))
 {
-    header('location:home.php');
+    header('location:index.php');
 }
 
 // saat username, email, dan password telah di isi maka akan login
@@ -19,7 +19,7 @@ if(isset($_POST['login']))
     // masuk ke halaman home
     if($database->login($username,$email,$password))
     {
-      header('location:home.php');
+      header('location:index.php');
     }
 }
 

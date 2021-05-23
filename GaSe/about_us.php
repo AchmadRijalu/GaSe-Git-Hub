@@ -1,3 +1,7 @@
+<?php require_once("feedback_controller.php");
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,19 +18,27 @@
             <img src="Picture/logo.png"> 
         </div>
         <div class="navbar">
-            <a href="home.php">HOME</a>
-            <a href="#">GAME STOCK</a>
-            <a href="#">CATEGORY</a>
+            <a href="index.php">HOME</a>
             <a href="about_us.php">ABOUT US</a>
+            <?php 
+                if(isset($_SESSION["is_login"])){
+            ?>
+            <a href="login.php">SIGN OUT</a>
+            <?php
+                }else{
+                    session_destroy();
+            ?>
             <a href="login.php">SIGN IN/SIGN UP</a>
+            <?php
+                }
+            ?>
         </div>        
     </nav>
     <div class="menu">
         <img src="Picture/menu_icon.png" id="menu-icon">
         <div class="menu-navbar">
-            <a href="home.php">HOME</a>
-            <a href="#">GAME STOCK</a>
-            <a href="about_us.php">ABOUT US</a>
+            <a href="index.php">HOME</a> <br><br>
+            <a href="about_us.php">ABOUT US</a> <br><br>
             <a href="login.php">SIGN IN/SIGN UP</a>
         </div>
     </div>
@@ -86,24 +98,21 @@
         <div class="judul-form-feedback">
             <h2>Form feedback</h2>
             <div class="user-msg-profile">
-                <?php require_once("feedback_controller.php");
-                    session_start();
-                    if(!empty($_SESSION)){
-                        $nama = $_SESSION["nama"];
+                <?php 
+                    if(isset($_SESSION["is_login"])){
                 ?>
-                <h1>Hi, <?=$nama?></h1>
+                <h1>Hi, <?=$_SESSION["username"]?></h1>
                 <?php
                     }else{
                 ?>
-                <!-- <h2>Mohon untuk SIGN IN terlebih dahulu</h2> -->
+                <h2>Mohon untuk SIGN IN terlebih dahulu</h2>
                 <?php
                     }
                 ?>
-                <h1>Hi, XYZ</h1> <!-- code ini untuk trial -->
+                <!-- <h1>Hi, XYZ</h1> code ini untuk trial -->
             </div>
 
             <div class="form">
-                
                 <form action="about_us.php" method="post">
                     Feedback:
                     <textarea name="message" cols="30" rows="15"></textarea><br>

@@ -23,7 +23,6 @@ class database{
 		$data_user = $query->fetch_array();
 		if(password_verify($password,$data_user['password']))
 		{
-			
 			$_SESSION['username'] = $username;
             $_SESSION['email'] = $data_user['email'];
 			$_SESSION['is_login'] = TRUE;
