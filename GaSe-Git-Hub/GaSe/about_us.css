@@ -1,0 +1,417 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('wall2.png');
+}
+
+nav {
+  background-color: black;
+  margin: -8px;
+  margin-top: -10px;
+  display: flex;
+  box-shadow: 2px 7px 25px black;
+  position: fixed;
+  width: 100%;
+  height: 15%;
+}
+
+.navbar > a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.navbar {
+  width: 100%;
+  float: right;
+  margin-top: 50px;
+  text-align: right;
+  margin-right: 3.5%;
+}
+
+.logo {
+  margin-right: 20%;
+  margin-left: 5%;
+  color: white;
+  margin-top: -10px;
+}
+
+.logo > img {
+  width: 80px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  background-color: black;
+  width: 90%;
+  text-align: center;
+  height: 5px;
+  margin-left: 5%;
+}
+
+.box-about-us {
+  background-color: white;
+  margin: 1.5%;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 150px;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.418);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 47%;
+  float: left;
+  height: 1100px;
+}
+
+.box-about-us > h1 {
+  font-size: 40px;
+}
+
+.center-img {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.navbar > a:hover {
+  color: black;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.chosen-img {
+  box-shadow: 2px 2px 8px black;
+}
+
+.bio {
+  margin-top: 50px;
+}
+
+.bio > img {
+  width: 30%;
+  height: auto;
+  border-radius: 40px;
+}
+
+.profile {
+  color: black;
+  font-size: 20px;
+}
+
+.tentang-gase {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.deskripsi {
+  color: rgb(83, 83, 83);
+}
+
+.founder {
+  margin-top: 50px;
+  text-align: left;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 30px;
+}
+
+.jabatan {
+  color: rgb(83, 83, 83);
+  margin-top: -16px;
+  font-style: italic;
+}
+
+.gambar-founder > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.gambar-founder {
+  border-radius: 30px;
+  width: 60%;
+  margin-left: 20%;
+  padding: 5px;
+  box-shadow: 2px 2px 10px black;
+}
+
+.box-feedback {
+  background-color: white;
+  text-align: center;
+  box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.418);
+  margin: 1.5%;
+  border-radius: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 150px;
+  width: 47%;
+  float: right;
+  height: 1100px;
+}
+
+.box-feedback > h1 {
+  font-size: 40px;
+}
+
+.judul-feedback {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.judul-form-feedback {
+  margin-top: 30px;
+  text-align: left;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.user-msg-profile {
+  border-radius: 30px;
+  width: 50%;
+  margin-left: 25%;
+  padding: 1px;
+  box-shadow: 2px 2px 10px black;
+  text-align: center;
+}
+
+.form {
+  box-shadow: 2px 2px 10px black;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+textarea {
+  margin-top: 30px;
+  width: 100%;
+  font-size: 18px;
+}
+
+#your-feedback {
+  margin-top: 20px;
+}
+
+input[type='submit'] {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 5px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .box-about-us {
+    background-color: white;
+    margin: 0.1%;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 120px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.418);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
+    height: 1100px;
+  }
+
+  .box-feedback {
+    text-align: center;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.418);
+    margin: 0.1%;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top: 20px;
+    width: 100%;
+    height: 1100px;
+  }
+
+  .logo {
+    margin-right: 0%;
+    margin-left: 2%;
+    color: white;
+    margin-top: -10px;
+    width: 20%;
+  }
+
+  .navbar {
+    width: 100%;
+    float: right;
+    margin-top: 50px;
+    text-align: right;
+    margin-right: 1%;
+  }
+
+  .chosen-img {
+    box-shadow: none;
+  }
+
+  .navbar > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 17px;
+  }
+
+  .navbar > a:hover {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 5px;
+    background-color: black;
+    border-radius: 0px;
+  }
+
+  nav {
+    background-color: black;
+    margin: -8px;
+    margin-top: -10px;
+    display: flex;
+    box-shadow: 2px 7px 25px black;
+    position: fixed;
+    width: 100%;
+    height: auto;
+  }
+
+  .logo > img {
+    width: 60px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .chosen-img {
+    box-shadow: none;
+  }
+
+  .logo > img {
+    width: 60px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    background-color: black;
+    width: 100%;
+    float: right;
+    margin-top: 90px;
+    text-align: right;
+    margin-right: 1%;
+    margin-left: 50%;
+  }
+
+  .box-about-us {
+    background-color: white;
+    margin: 0.1%;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 110px;
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.418);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
+    height: 1100px;
+  }
+
+  .form {
+    box-shadow: 2px 2px 10px black;
+    width: 90%;
+    margin-left: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .gambar-founder > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bio > img {
+    width: 50%;
+    height: auto;
+    border-radius: 40px;
+  }
+
+  #menu-icon {
+    background-color: white;
+    padding: 10px;
+    width: 24px;
+    border-radius: 20px 20px 0px 0px;
+    height: 24px;
+    float: right;
+  }
+
+  .menu {
+    float: right;
+    margin-left: 55%;
+    margin-top: 21px;
+    position: fixed;
+    z-index: 1;
+    width: 40%;
+  }
+
+  .menu-navbar {
+    background-color: white;
+    width: 100%;
+    float: right;
+    border-radius: 10px 0px 10px 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px black;
+  }
+
+  .menu-navbar > a {
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  textarea {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  #your-feedback {
+    margin-top: 20px;
+  }
+
+  input[type='submit'] {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    padding: 5px;
+  }
+
+  footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
