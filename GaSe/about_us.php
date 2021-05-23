@@ -88,7 +88,7 @@
         <p class="divider"></p>
 
         <div class="judul-feedback">
-            <h2>Berikan feedback</h2>
+            <h2>Berikan Feedback</h2>
             <p class="deskripsi">
                 Berikan feedback mengenai website ini kepada kami
                 sehingga kami bisa terus mengembangkan website ini demi kenyamanan Anda.
@@ -96,7 +96,7 @@
         </div>
 
         <div class="judul-form-feedback">
-            <h2>Form feedback</h2>
+            <h2>Form Feedback</h2>
             <div class="user-msg-profile">
                 <?php 
                     if(isset($_SESSION["is_login"])){
@@ -117,7 +117,7 @@
                     Feedback:
                     <textarea name="message" cols="30" rows="15"></textarea><br>
                     <br>
-                    <input type="submit" value="Submit feedback">
+                    <input type="submit" value="SUBMIT">
                 </form>
                 <?php
                     if(!empty($_POST)){

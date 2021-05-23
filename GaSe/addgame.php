@@ -30,10 +30,11 @@ if(isset ($_POST["inputsubmit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Game</title>
+    <title>Add Game</title>
+    <link rel="stylesheet" href="addgame.css">
 </head>
 <body>
-    <h1>Tambah Game</h1>
+    <h1>Add Game</h1>
 
     <form action="" method="POST" enctype="multipart/form-data">
     
@@ -45,9 +46,9 @@ if(isset ($_POST["inputsubmit"])){
     <li><label for="genre">Input Genre : </label><input type="text" name="genre" required></li>
     <br>
     <li><label for="gambar">Input Gambar : </label><input type="file" name="gambar" ></li>
+    <br>
+    <input type="submit" class="btn" name="inputsubmit" value="Add">
     </ul>
-        
-    <li><input type="submit" name="inputsubmit"></li>
     </form>
 
 

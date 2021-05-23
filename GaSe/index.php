@@ -79,7 +79,7 @@ if(isset($_POST["cari"])){
     <br><br>
     <p> 
         
-    <a href="addgame.php">Tambah Game</a></p>
+    <a href="addgame.php">Add Game</a></p>
     
     <?php foreach($data as $game) : ?>
 
@@ -96,8 +96,8 @@ if(isset($_POST["cari"])){
     <h3><?php echo $game["harga"] ?></h3>
     <br>
     <h4><?php echo $game["genre"] ?></h4>
-    <p> <a href="editgame.php?id=<?php echo $game['id'];?>">Ubah</a></p>
-    <p> <a href="deletegame.php?id=<?php echo $game['id']; ?> ">Hapus</a></p>
+    <p> <a href="editgame.php?id=<?php echo $game['id'];?>">Edit Game</a></p>
+    <p> <a href="deletegame.php?id=<?php echo $game['id']; ?> ">Delete Game</a></p>
     </div>
     <?php  endforeach;?>
     </div>
