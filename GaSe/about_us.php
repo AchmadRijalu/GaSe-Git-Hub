@@ -23,10 +23,10 @@
             <?php 
                 if(isset($_SESSION["is_login"])){
             ?>
-            <a href="login.php">SIGN OUT</a>
+            <a href="logout.php">SIGN OUT</a>
             <?php
                 }else{
-                    session_destroy();
+                   
             ?>
             <a href="login.php">SIGN IN/SIGN UP</a>
             <?php
@@ -39,7 +39,18 @@
         <div class="menu-navbar">
             <a href="index.php">HOME</a> <br><br>
             <a href="about_us.php">ABOUT US</a> <br><br>
+            <?php 
+                if(isset($_SESSION["is_login"])){
+            ?>
             <a href="login.php">SIGN IN/SIGN UP</a>
+            <?php
+                }else{
+                   
+            ?>
+            <a href="logout.php">SIGN OUT</a>
+            <?php 
+                }
+                ?>
         </div>
     </div>
 

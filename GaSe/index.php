@@ -44,7 +44,7 @@ if(isset($_POST["cari"])){
                 <?php
                     }else{
                 ?>
-                <a href="login.php">SIGN OUT</a> 
+                <a href="logout.php">SIGN OUT</a> 
                 <?php
                     }
                 ?>
