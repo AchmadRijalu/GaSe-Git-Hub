@@ -1,13 +1,13 @@
 <?php require_once("db_controller.php");
 
-    function create_data($nama, $message, $id){
+    function create_data($nama, $message){
         
         $response = "";
 
         $conn = connect();
 
-        $query = $conn->prepare("INSERT INTO feedback_user (nama, feedback, id_user) VALUES (?, ?, ?)");
-        $query->bind_param("ssi", $nama, $message, $id);
+        $query = $conn->prepare("INSERT INTO feedback_user (nama, message) VALUES (?, ?)");
+        $query->bind_param("ss", $nama, $message);
 
         $result = $query->execute() or die(mysqli_error($conn));
 
@@ -33,7 +33,7 @@
         if($query->num_rows > 0){
             while($row = $query->fetch_assoc()){
                 $data["nama"] = $row["nama"];
-                $data["feedback"] = $row["feedback"];
+                $data["message"] = $row["message"];
                 array_push($all_data, $data);
             }
         }else{

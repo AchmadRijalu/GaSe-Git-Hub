@@ -54,7 +54,7 @@ if(isset($_POST["cari"])){
     </div>
     <br>
     <div class="prom">
-       <p><img src="https://thumbs.gfycat.com/SlimWarmBluemorphobutterfly-max-1mb.gif"></p>
+        &nbsp;
     </div>
 
     <div class="limit">
@@ -77,13 +77,10 @@ if(isset($_POST["cari"])){
 
     <h1>Game Stock</h1>
     <br><br>
-    <?php
-        if(isset($_SESSION['level']) && $_SESSION['level'] == "admin"){
-    ?>
-    <p><a href="addgame.php" class="admin_crud">Add Game</a></p>
-    <?php
-        }
-    ?>
+    <p> 
+        
+    <a href="addgame.php">Add Game</a></p>
+    
     <?php foreach($data as $game) : ?>
 
     <div class="stock">
@@ -99,14 +96,8 @@ if(isset($_POST["cari"])){
     <h3><?php echo $game["harga"] ?></h3>
     <br>
     <h4><?php echo $game["genre"] ?></h4>
-    <?php
-        if(isset($_SESSION) && $_SESSION['level'] == "admin"){
-    ?>
-    <p> <a class="admin_crud" href="editgame.php?id=<?php echo $game['id'];?>">Edit Game</a></p>
-    <p> <a class="admin_crud" href="deletegame.php?id=<?php echo $game['id']; ?> ">Delete Game</a></p>
-    <?php
-        }
-    ?>
+    <p> <a href="editgame.php?id=<?php echo $game['id'];?>">Edit Game</a></p>
+    <p> <a href="deletegame.php?id=<?php echo $game['id']; ?> ">Delete Game</a></p>
     </div>
     <?php  endforeach;?>
     </div>
