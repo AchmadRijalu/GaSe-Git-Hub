@@ -65,12 +65,12 @@
   border-radius: 20px;
 } */
 
-.prom{
+.prom {
   text-align: center;
   margin-top: 100px;
 }
 
-.prom img{
+.prom img {
   width: 100%;
   margin: auto;
 }
@@ -83,7 +83,7 @@
   border: 2px solid rgb(188, 199, 28);
   border-radius: 20px;
 }
-.admin_crud{
+.admin_crud {
   color: white;
 }
 
