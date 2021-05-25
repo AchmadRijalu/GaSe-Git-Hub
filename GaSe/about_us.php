@@ -23,12 +23,11 @@
             <?php 
                 if(isset($_SESSION["is_login"])){
             ?>
-            <a href="login.php">SIGN OUT</a>
+            <a href="logout.php">SIGN OUT</a>
             <?php
                 }else{
-                    session_destroy();
             ?>
-            <a href="login.php">SIGN IN/SIGN UP</a>
+                <a href="login.php">SIGN IN/SIGN UP</a>
             <?php
                 }
             ?>
@@ -39,7 +38,17 @@
         <div class="menu-navbar">
             <a href="index.php">HOME</a> <br><br>
             <a href="about_us.php">ABOUT US</a> <br><br>
+            <?php
+                if(!isset($_SESSION["is_login"])){
+            ?>
             <a href="login.php">SIGN IN/SIGN UP</a>
+            <?php
+                }else{
+            ?>
+             <a href="logout.php">SIGN OUT</a>
+             <?php
+                }
+             ?>
         </div>
     </div>
 
@@ -111,7 +120,10 @@
                 ?>
                 <!-- <h1>Hi, XYZ</h1> code ini untuk trial -->
             </div>
-
+            <?php
+                if(!empty($_SESSION)){
+                    if($_SESSION['level'] != "admin"){
+            ?>
             <div class="form">
                 <form action="about_us.php" method="post">
                     Feedback:
@@ -123,15 +135,46 @@
                     if(!empty($_POST)){
                         $nama = "xyz";
                         $message = $_POST["message"];
-                        create_data($nama, $message);
+                        $id = $_SESSION['id'];
+                        create_data($nama, $message, $id);
                     }
                 ?>
             </div>
-            
+            <?php
+                }else if(isset($_SESSION)){
+                    if( $_SESSION['level'] == "admin"){
+            ?>
+                <div class="form">
+                    <p>User feedback:</p>
+                    <p class="divider"></p>
+                    <?php
+                        $feedback_user = read_data($_SESSION['id']);
+                        if(sizeof($feedback_user) >= 10){
+                            $data_feedback = array_slice($feedback_user, sizeof($feedback_user) - 10);
+                        }else{
+                            $data_feedback = $feedback_user;
+                        }
+                        foreach($data_feedback as $x){
+                    ?>
+                        <p><?=$x['nama']?>: <?=$x['feedback']?></p>
+                    <?php
+                        }
+                    ?>
+                </div>
+            <?php
+                        }
+                    }
+            ?>
+                <footer>
+                    Thank you for your feedback!
+                </footer>
+            <?php
+                }else if(!isset($_SESSION)){
+            ?>
+            <?php
+                }
+            ?>
         </div>
-        <footer>
-            Thank you for your feedback!
-        </footer>
     </div>
     
     <script>
