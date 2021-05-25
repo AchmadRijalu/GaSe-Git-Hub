@@ -20,12 +20,14 @@ class database{
 	function login($username,$email,$password)
 	{
 		$query = mysqli_query($this->koneksi,"select * from user where username='$username'");
-		$data_user = $query->fetch_array();
+		$data_user = $query->fetch_assoc();
 		if(password_verify($password,$data_user['password']))
 		{
 			$_SESSION['username'] = $username;
             $_SESSION['email'] = $data_user['email'];
 			$_SESSION['is_login'] = TRUE;
+			$_SESSION['level'] = $data_user['level'];
+			$_SESSION['id'] = $data_user['id'];
 			return TRUE;
 		}
 	}
