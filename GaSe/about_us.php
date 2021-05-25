@@ -133,7 +133,7 @@
                 </form>
                 <?php
                     if(!empty($_POST)){
-                        $nama = "xyz";
+                        $nama = $_SESSION["username"];
                         $message = $_POST["message"];
                         $id = $_SESSION['id'];
                         create_data($nama, $message, $id);
@@ -148,7 +148,7 @@
                     <p>User feedback:</p>
                     <p class="divider"></p>
                     <?php
-                        $feedback_user = read_data($_SESSION['id']);
+                        $feedback_user = read_data();
                         if(sizeof($feedback_user) >= 10){
                             $data_feedback = array_slice($feedback_user, sizeof($feedback_user) - 10);
                         }else{

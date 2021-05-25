@@ -1,19 +1,17 @@
 <?php 
-include_once('db_connect.php');
+require_once('db_connect.php');
 $database = new database();
 
 // saat username, email, dan password telah di isi maka akan registrasi
-if(isset($_POST['register']))
+if(isset($_POST['register']) && !empty($_POST))
 {
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-
     // masuk ke halaman login
-    if($database->register($username, $email, $password))
-    {
-      header('location:login.php');
-    }
+    $database->register($username, $email, $password);
+    header('location:login.php');
+    
 }
 ?>
 <!DOCTYPE html>
