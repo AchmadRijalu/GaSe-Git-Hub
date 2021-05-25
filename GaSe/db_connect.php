@@ -13,7 +13,7 @@ class database{
 
 	function register($username,$email,$password)
 	{	
-		$insert = mysqli_query($this->koneksi,"insert into user values ('','$username','$email','$password')");
+		$insert = mysqli_query($this->koneksi,"INSERT INTO user(username, email, password) VALUES('$username','$email','$password')");
 		return $insert;
 	}
 

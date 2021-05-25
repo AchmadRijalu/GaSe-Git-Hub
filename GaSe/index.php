@@ -78,7 +78,7 @@ if(isset($_POST["cari"])){
     <h1>Game Stock</h1>
     <br><br>
     <?php
-        if(!empty($_SESSION['level']) && $_SESSION['level'] == "admin"){
+        if(!empty($_SESSION) && $_SESSION['level'] == "admin"){
     ?>
     <p><a href="addgame.php" class="admin_crud">Add Game</a></p>
     <?php
