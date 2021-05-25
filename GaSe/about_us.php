@@ -26,6 +26,12 @@
             <a href="logout.php">SIGN OUT</a>
             <?php
                 }else{
+<<<<<<< HEAD
+||||||| 48d1032
+                    session_destroy();
+=======
+                   
+>>>>>>> 73bea58d735cb3c0efd1dea562495b0aba0e2795
             ?>
                 <a href="login.php">SIGN IN/SIGN UP</a>
             <?php
@@ -38,10 +44,18 @@
         <div class="menu-navbar">
             <a href="index.php">HOME</a> <br><br>
             <a href="about_us.php">ABOUT US</a> <br><br>
+<<<<<<< HEAD
             <?php
                 if(!isset($_SESSION["is_login"])){
             ?>
+||||||| 48d1032
+=======
+            <?php 
+                if(isset($_SESSION["is_login"])){
+            ?>
+>>>>>>> 73bea58d735cb3c0efd1dea562495b0aba0e2795
             <a href="login.php">SIGN IN/SIGN UP</a>
+<<<<<<< HEAD
             <?php
                 }else{
             ?>
@@ -49,6 +63,17 @@
              <?php
                 }
              ?>
+||||||| 48d1032
+=======
+            <?php
+                }else{
+                   
+            ?>
+            <a href="logout.php">SIGN OUT</a>
+            <?php 
+                }
+                ?>
+>>>>>>> 73bea58d735cb3c0efd1dea562495b0aba0e2795
         </div>
     </div>
 
