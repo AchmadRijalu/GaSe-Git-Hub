@@ -3,6 +3,10 @@ session_start();
 include_once('db_connect.php');
 $database = new database();
 
+$data = "SELECT * FROM user ";
+$var = connectDB();
+$result = mysqli_query($var, $data) or die (mysqli_error($var));
+
 // untuk mengecek user yang sudah login akan di direct ke halaman home
 if(isset($_SESSION['is_login']))
 {
@@ -12,14 +16,28 @@ if(isset($_SESSION['is_login']))
 // saat username, email, dan password telah di isi maka akan login
 if(isset($_POST['login']))
 {
+
+    $sql = "SELECT * FROM user WHERE username='$_POST[username]'";
+    $result = mysqli_query($var, $sql);
+
+    $user = $result->fetch_assoc();
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $unamedb = $_POST['username'];
+    $emaildb = $_POST['email'];
+    $passworddb = $_POST['password'];
 
     // masuk ke halaman home
-    if($database->login($username,$email,$password))
-    {
-      header('location:index.php');
+    if ($username == $unamedb && $email == $emaildb && $password == $passworddb) {
+      if(password_verify($password, $user['password'])){
+          $_SESSION['is_login'] = "";
+          $_SESSION['username'] = $username;
+          $_SESSION['id_user'] = $user['id'];  
+          $_SESSION['level'] = $user['level'];
+          echo $user['level'];
+          header('location:index.php');
+      }
     }
 }
 

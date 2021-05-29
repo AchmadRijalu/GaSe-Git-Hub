@@ -8,8 +8,10 @@ if(isset($_POST['register']) && !empty($_POST))
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    $level = 'guest';
+    
     // masuk ke halaman login
-    $database->register($username, $email, $password);
+    register($username, $email, $password, $level);
     header('location:login.php');
     
 }

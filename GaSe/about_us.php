@@ -135,7 +135,7 @@
                     if(!empty($_POST)){
                         $nama = $_SESSION["username"];
                         $message = $_POST["message"];
-                        $id = $_SESSION['id'];
+                        $id = $_SESSION['id_user'];
                         create_data($nama, $message, $id);
                     }
                 ?>

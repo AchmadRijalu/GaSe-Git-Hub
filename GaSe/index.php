@@ -66,6 +66,7 @@ if(isset($_POST["cari"])){
         <button type="submit" name="cari">Search</button>
     
         </form>
+    
         </div>
         
     </div>
@@ -78,10 +79,11 @@ if(isset($_POST["cari"])){
     <h1>Game Stock</h1>
     <br><br>
     <?php
-        if(!empty($_SESSION) && $_SESSION['level'] == "admin"){
-    ?>
-    <p><a href="addgame.php" class="admin_crud">Add Game</a></p>
-    <?php
+        if(isset($_SESSION['level']) && $_SESSION['level'] == "admin"){
+            echo $_SESSION['level'];
+            echo "<p> <a class='admin_crud' href='updateuser.php'>Update User</a></p>";
+            echo "<p> <a class='admin_crud' href='deleteuser.php'>Delete User</a></p>";
+            echo "<p><a href=addgame.php class=admin_crud>Add Game</a></p>";
         }
     ?>
     <?php foreach($data as $game) : ?>

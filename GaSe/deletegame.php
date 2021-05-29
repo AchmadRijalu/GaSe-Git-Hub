@@ -1,8 +1,6 @@
 <?php
 include 'controller.php';
 
-
-
 $delete = $_GET['id'];
 
     if(hapus($delete) > 0){
@@ -14,8 +12,4 @@ $delete = $_GET['id'];
         echo "<br>";
         echo mysqli_error($conn);
     }
-
-
-
-
 ?>
