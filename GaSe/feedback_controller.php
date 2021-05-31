@@ -21,7 +21,6 @@
         close_conn($conn);
 
         return $response;
-    
     }
 
     function read_data(){
@@ -32,6 +31,45 @@
 
         if($query->num_rows > 0){
             while($row = $query->fetch_assoc()){
+                $data["id"] = $row["id"];
+                $data["nama"] = $row["nama"];
+                $data["feedback"] = $row["feedback"];
+                $data["user_id"] = $row["id_user"];
+                array_push($all_data, $data);
+            }
+        }else{
+            echo "No feedback found!";
+        }
+        
+        $query->close();
+        close_conn($conn);
+        
+        return $all_data;
+    }
+
+    function read_by_id($id){
+        $all_data = array();
+        $conn = connect();
+
+        $query = $conn->query("SELECT * FROM feedback_user WHERE id=$id") or die(mysqli_error($conn));
+
+        $all_data = $query->fetch_array();
+        
+        $query->close();
+        close_conn($conn);
+        
+        return $all_data;
+    }
+
+    function user_read_data($user_id){
+        $all_data = array();
+        $conn = connect();
+
+        $query = $conn->query("SELECT * FROM feedback_user WHERE id_user=$user_id") or die(mysqli_error($conn));
+
+        if($query->num_rows > 0){
+            while($row = $query->fetch_assoc()){
+                $data["id"] = $row["id"];
                 $data["nama"] = $row["nama"];
                 $data["feedback"] = $row["feedback"];
                 array_push($all_data, $data);
@@ -53,18 +91,34 @@
         $query = $conn->prepare("DELETE FROM feedback_user WHERE id = ?");
         $query->bind_param("i", $id);
         
-        if($query->num_rows > 0){
-            $result = $query->execute() or die(mysqli_error($conn));
-            if($result){
-                $response = "Data telah berhasil terhapus!";
-            }else{
-                $response =  "Data gagal terhapus!";
-            }
+        $result = $query->execute() or die(mysqli_error($conn));
+        if($result){
+            $response = "Data telah berhasil terhapus!";
+        }else{
+            $response =  "Data gagal terhapus!";
         }
+        
         
         $query->close();
         close_conn($conn);
         
+        return $response;
+    }
+
+    function update_data($id, $feedback){
+        $response = "";
+        $conn = connect();
+
+        $query = $conn->prepare("UPDATE feedback_user SET feedback = ? WHERE id=?");
+        $query->bind_param("si", $feedback, $id);
+        
+        $result = $query->execute() or die(mysqli_error($conn));
+        if($result){
+            $response = "Update berhasil!";
+        }else{
+            $response = "Update gagal!";
+        }
+
         return $response;
     }
 

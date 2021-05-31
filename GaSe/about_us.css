@@ -6,6 +6,32 @@ body {
   background-image: url('wall2.png');
 }
 
+#user-cru{
+  text-align: center;
+}
+
+#btn-admin-ud{
+  width: 100%;
+  text-align: center;
+}
+
+.link-admin-ud{
+  color: white;
+  text-decoration: none;
+}
+
+.user-read{
+  text-decoration: none;
+  color: white;
+}
+
+button{
+  background-color: black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
 nav {
   background-color: black;
   margin: -8px;

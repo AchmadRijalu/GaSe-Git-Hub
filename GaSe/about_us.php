@@ -131,6 +131,10 @@
                     <br>
                     <input type="submit" value="SUBMIT">
                 </form>
+                <div class="user-cru">
+                    <button><a href="user_read_feedback.php" class="user-read">Read my feedback</a></button>
+                    <button><a href="user_update_feedback.php" class="user-read">Update my feedback</a></button>
+                </div>
                 <?php
                     if(!empty($_POST)){
                         $nama = $_SESSION["username"];
@@ -140,6 +144,9 @@
                     }
                 ?>
             </div>
+            <footer>
+                Thank you for your feedback!
+            </footer>
             <?php
                 }else if(isset($_SESSION)){
                     if( $_SESSION['level'] == "admin"){
@@ -160,14 +167,16 @@
                     <?php
                         }
                     ?>
-                </div>
+                    </div>
+                    <!-- button for admin to delete and update goes here -->
+                    <div id="btn-admin-ud"> 
+                        <button><a href="admin_delete_feedback.php" class="link-admin-ud">Delete user feedback</a></button> 
+                    </div>
             <?php
                         }
                     }
             ?>
-                <footer>
-                    Thank you for your feedback!
-                </footer>
+                
             <?php
                 }else if(!isset($_SESSION)){
             ?>
