@@ -19,7 +19,7 @@
 }
 .logo {
   float: left;
-  margin: 10px 20px 20px 30px;
+  margin: 10px 20px 20px 50px;
   background: none;
 }
 .banner ul {
@@ -168,18 +168,13 @@ p {
     width: 40%;
     margin: 30px 40px 30px 40px;
   }
-  .image-pos {
-    margin-left: 50px;
-  }
+ 
 }
 
 @media screen and (max-width: 1240px) {
   .stock {
     width: 40%;
     margin: 30px 40px 30px 40px;
-  }
-  .image-pos {
-    margin-left: 45px;
   }
 }
 
@@ -188,18 +183,12 @@ p {
     width: 40%;
     margin: 30px 35px 30px 35px;
   }
-  .image-pos {
-    margin-left: 45px;
-  }
 }
 
 @media screen and (max-width: 1090px) {
   .stock {
     width: 40%;
     margin: 30px 20px 30px 35px;
-  }
-  .image-pos {
-    margin-left: 40px;
   }
 }
 
@@ -208,18 +197,12 @@ p {
     width: 40%;
     margin: 30px 25px 30px 30px;
   }
-  .image-pos {
-    margin-left: 40px;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .stock {
     width: 40%;
     margin: 30px 25px 30px 30px;
-  }
-  .image-pos {
-    margin-left: 35px;
   }
 }
 
@@ -228,18 +211,12 @@ p {
     width: 40%;
     margin: 30px 25px 30px 30px;
   }
-  .image-pos {
-    margin-left: 35px;
-  }
 }
 
 @media screen and (max-width: 800px) {
   .stock {
     width: 40%;
     margin: 30px 25px 30px 25px;
-  }
-  .image-pos {
-    margin-left: 30px;
   }
 }
 
@@ -248,18 +225,12 @@ p {
     width: 80%;
     margin: 30px 50px 30px 50px;
   }
-  .image-pos {
-    margin-left: 60px;
-  }
 }
 
 @media screen and (max-width: 700px) {
   .stock {
     width: 80%;
     margin: 30px 20px 30px 50px;
-  }
-  .image-pos {
-    margin-left: 55px;
   }
 }
 
@@ -268,13 +239,10 @@ p {
     width: 76%;
     margin: 30px 50px 30px 50px;
   }
-  .image-pos {
-    margin-left: 50px;
-  }
-    .banner ul li {
+     .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
-    margin: 40px 20px;
+    margin: 40px 15px;
     font-size: 18px;
     border-radius: 10px;
   }
@@ -285,14 +253,11 @@ p {
     width: 76%;
     margin: 30px 20px 30px 40px;
   }
-  .image-pos {
-    margin-left: 42px;
-  }
-  .banner ul li {
+   .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
     margin: 40px 10px;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 10px;
   }
 }
@@ -302,13 +267,10 @@ p {
     width: 76%;
     margin: 30px 20px 30px 40px;
   }
-  .image-pos {
-    margin-left: 40px;
-  }
-  .banner ul li {
+   .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
-    margin: 40px 5px;
+    margin: 40px -2px;
     font-size: 15px;
     border-radius: 10px;
   }
@@ -319,13 +281,10 @@ p {
     width: 76%;
     margin: 30px 20px 30px 30px;
   }
-  .image-pos {
-    margin-left: 32px;
-  }
-  .banner ul li {
+   .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
-    margin: 40px -1px;
+    margin: 40px -2px;
     font-size: 13px;
     border-radius: 10px;
   }
@@ -336,10 +295,7 @@ p {
     width: 76%;
     margin: 30px 20px 30px 30px;
   }
-  .image-pos {
-    margin-left: 28px;
-  }
-  .banner ul li {
+   .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
     margin: 40px -2px;
@@ -353,37 +309,10 @@ p {
     width: 76%;
     margin: 30px 20px 30px 30px;
   }
-  .image-pos {
-    margin-left: 11px;
-  }
-  .image-pos img {
-    width: 140px;
-    height: 110px;
-  }
-  .banner ul li {
+   .banner ul li {
     background: rgba(0, 0, 0, 0.267);
     list-style-type: none;
-    margin: 40px -2px;
-    font-size: 8px;
-    border-radius: 10px;
-  }
-}
-  @media screen and (max-width: 314px) {
-  .stock {
-    width: 76%;
-    margin: 30px 20px 30px 30px;
-  }
-  .image-pos {
-    margin-left: 11px;
-  }
-  .image-pos img {
-    width: 140px;
-    height: 110px;
-  }
-  .banner ul li {
-    background: rgba(0, 0, 0, 0.267);
-    list-style-type: none;
-    margin: 40px -2px;
+    margin: 20px -2px;
     font-size: 8px;
     border-radius: 10px;
   }
