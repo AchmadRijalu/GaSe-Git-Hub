@@ -1,9 +1,9 @@
 <?php 
 class database{
 	var $host = "localhost";
-	var $username = "ucweb1_gase";
-	var $password = "gaseadmin123";
-	var $database = "ucweb1_gase";
+	var $username = "root";
+	var $password = "";
+	var $database = "gase";
 	var $konek;
 }
 
