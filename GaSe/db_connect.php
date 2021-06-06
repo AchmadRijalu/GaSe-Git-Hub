@@ -1,17 +1,17 @@
 <?php 
 class database{
 	var $host = "localhost";
-	var $username = "root";
-	var $password = "";
-	var $database = "gase";
+	var $username = "ucweb1_gase";
+	var $password = "gaseadmin123";
+	var $database = "ucweb1_gase";
 	var $konek;
 }
 
 function connectDB() {
 	 $host = "localhost";
-	 $username = "root";
-	 $password = "";
-	 $database = "gase";
+	 $username = "ucweb1_gase";
+	 $password = "gaseadmin123";
+	 $database = "ucweb1_gase";
 
 	$koneksi = mysqli_connect($host, $username, $password, $database)
 	or die("Error!");
