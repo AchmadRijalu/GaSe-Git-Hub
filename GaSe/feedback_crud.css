@@ -1,12 +1,16 @@
-body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-image: url('wall2.png');
-    background-blend-mode: darken;
-    color: white;
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('wall2.png');
+  background-blend-mode: darken;
+  color: white;
 }
 
-.back{
-    color: white;
+.back {
+  color: white;
+}
+
+button {
+    display: inline-block;
 }
