@@ -9,9 +9,9 @@ class database{
 
 function connectDB() {
 	 $host = "localhost";
-	 $username = "ucweb1_gase";
-	 $password = "gaseadmin123";
-	 $database = "ucweb1_gase";
+	 $username = "root";
+	 $password = "";
+	 $database = "gase";
 
 	$koneksi = mysqli_connect($host, $username, $password, $database)
 	or die("Error!");
